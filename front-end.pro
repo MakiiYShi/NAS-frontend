@@ -26,15 +26,29 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        inputcanvas.cpp \
+        arrow.cpp \
+        diagramscene.cpp \
+        diagramitem.cpp \
+        diagramtextitem.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+        inputcanvas.h \
+        arrow.h \
+        diagramscene.h \
+        diagramitem.h \
+        diagramtextitem.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+        inputcanvas.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc
